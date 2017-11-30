@@ -1,0 +1,84 @@
+.phone-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  .phone-top {
+    display: flex;
+    align-items: center;
+    margin-top: 20%;
+    span {
+      display: block;
+      width: 100%;
+      flex: 1;
+      text-align: center;
+      img {
+        width: 70%;
+        border-radius: 100%;
+
+      }
+    }
+    .phone-left {
+      text-align: right;
+    }
+    .phone-right {
+      text-align: left;
+    }
+
+  }
+  .phone-center {
+    color: #fff;
+    text-align: center;
+    margin-top: 8%;
+    p {
+      font-size: 18px;
+      line-height: 40px;
+    }
+    span {
+      display: inline-block;
+      width: 55%;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .phone-bottom {
+    position: absolute;
+    bottom: 6%;
+    left: 0;
+    width: 100%;
+    & > div {
+      text-align: center;
+    }
+
+    button {
+      width: 80%;
+      height: 50px;
+      color: #fff;
+      border-radius: 2px;
+      font-size: 16px;
+      border: none;
+    }
+
+    .phone-start {
+      margin-bottom: 30px;
+
+      button {
+        background: #30c2e5;
+      }
+      button:hover, .button:active {
+        background: #2bb4d5;
+      }
+    }
+
+    .phone-cancel {
+      button {
+        background: transparent;
+        border: 1px solid #dbdbdb;
+      }
+    }
+  }
+}

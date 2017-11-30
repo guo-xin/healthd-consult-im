@@ -1,0 +1,46 @@
+{
+  "name": "webim",
+  "version": "1.2.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^6.6.0",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "*",
+    "es6-promise": "^4.1.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "*",
+    "html-webpack-plugin": "^2.22.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "line-numbers": "*",
+    "node-libs-browser": "^0.5.0",
+    "postcss-loader": "^1.2.1",
+    "react": "*",
+    "react-dom": "*",
+    "react-fastclick": "^2.1.2",
+    "rimraf": "^2.5.4",
+    "style-loader": "*",
+    "webpack": "^1.9.11",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --content-base ./dist --inline --profile --hot --port 80 --host 0.0.0.0",
+    "build": "rimraf ../chronicd-server-web/im && webpack --config webpack.config.prod.js --progress --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "pubsub-js": "^1.5.4"
+  }
+}

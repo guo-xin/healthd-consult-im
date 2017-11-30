@@ -1,0 +1,102 @@
+.webim-chatwindow-title {
+  top: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  font-size: 14px;
+  margin: auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 14px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  /*position: absolute;*/
+  position: relative;
+  z-index: 2;
+
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+
+  span {
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+  .doctor-pic {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 5px;
+    img {
+      width: 30px;
+    }
+
+  }
+
+  i {
+    color: #cccccc;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 10px;
+    padding-bottom: 22px;
+
+    &.webim-up-icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+/*顶部tab切换样式*/
+.head {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  /*position: absolute;*/
+  z-index: 2;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 18px;
+    left: 50%;
+    top: 0;
+    margin-top: 16px;
+    background: #ececec;
+  }
+  a {
+    text-decoration: none;
+    float: none;
+    display: block;
+  }
+  .left {
+    color: #30c2e5;
+    flex: 1;
+    border-bottom: 2px solid #30c2e5;
+    span {
+      position: relative;
+      height: 100%;
+      display: inline-block;
+      padding: 0 5px;
+    }
+  }
+  .right {
+    color: #999;
+    flex: 1;
+  }
+}

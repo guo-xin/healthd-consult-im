@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="full-screen" content="yes"/>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.app.css[0] %>">
+
+    <script type="text/javascript">
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            // 通过下面这个API隐藏右上角按钮
+            WeixinJSBridge && WeixinJSBridge.call('hideOptionMenu');
+        });
+
+        document.oncontextmenu = function () {
+            return false;
+        };
+        document.onselectstart = function () {
+            return false;
+        };
+
+        window.chronicdConfig = {
+            api: '/chronicd-server-api/'
+        };
+
+        setTimeout(function () {
+            if (document.getElementById("loadingWrapper")) {
+                document.getElementById("loadingWrapper").style.display = '';
+            }
+        }, 10000);
+    </script>
+</head>
+<body>
+<section id='main' class='w100'>
+    <article id='chat'></article>
+    <article id='components'></article>
+    <div class="webim-loading" id="loadingWrapper" style="display: none">
+        <span id="loading">网络连接异常，请检查网络后重试</span>
+    </div>
+</section>
+<!--微信config-->
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script type="text/javascript" src="js/webim.config.js"></script>
+<script type="text/javascript" src="js/strophe-1.2.8.min.js"></script>
+<script type="text/javascript" src="js/websdk-1.4.10.js"></script>
+<script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.app.entry %>"></script>
+</body>
+</html>

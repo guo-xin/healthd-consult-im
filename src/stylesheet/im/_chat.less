@@ -1,0 +1,253 @@
+.webim-chat {
+  position: relative;
+  max-width: 1024px;
+  min-width: 320px;
+  /*min-width: 960px;gqs*/
+  /*max-height: 600px;gqs*/
+  height: 100%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+  border: 0px none rgb(0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.webim-chatwindow {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  background: #f7f7f9;
+  display: flex;
+  flex-direction: column;
+  /*width: calc(100% - 303px);gqs*/
+
+  .webim-group-memeber {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    margin: auto;
+    padding: 10px 7px;
+    border-radius: 2px;
+    width: 200px;
+    overflow: auto;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+    z-index: 2;
+    background: #fff;
+    max-height: 300px;
+
+    li {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 4px;
+      box-sizing: border-box;
+      text-align: left;
+
+      > div {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 6px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+  }
+}
+
+.webim-chatwindow-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+
+  i {
+    color: #cccccc;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 10px;
+    padding-bottom: 22px;
+
+    &.webim-up-icon {
+      transform: rotate(180deg);
+    }
+
+    &.webim-call-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &.webim-accept-icon {
+      position: absolute;
+      left: 40px;
+      top: 0;
+    }
+  }
+}
+
+.webim-chatwindow-msg {
+  flex: 1;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0px 10px;
+  width: 100%;
+  background: #f7f7f9;
+  -webkit-overflow-scrolling: touch;
+  transform: translate3d(0, 0, 0);
+}
+
+.webim-send-wrapper {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  background: #ededed;
+  z-index: 100;
+
+  .top {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+
+    & > div, & > span, & > button {
+      height: 36px;
+      line-height: 36px;
+      margin: 6px 5px;
+    }
+
+    .webim-auto-icon, .webim-auto-icon:hover, .webim-keybord-icon, .webim-keybord-icon:hover, .webim-add-icon, .webim-add-icon:hover {
+      display: block;
+      width: 30px;
+      background-size: 30px 30px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .webim-send-input {
+      flex: 1;
+      margin: 0 5px;
+      height: auto;
+
+      textarea {
+        display: block;
+        box-sizing: border-box;
+        height: 36px;
+        font-size: 14px;
+        width: 100%;
+        border: 0;
+        padding: 10px;
+        vertical-align: middle;
+        margin: 5px 0;
+      }
+      p {
+        box-sizing: border-box;
+        height: 36px;
+        line-height: 36px;
+        border: 1px solid #c0c0c0;
+        border-radius: 4px;
+        text-align: center;
+      }
+      p.active {
+        background: #d4d4d4;
+        color: #999;
+      }
+    }
+
+    .webim-send-btn {
+      width: 60px;
+      font-size: 14px;
+      line-height: 26px;
+
+      &:link, &:visited {
+        background: #4eb1f4;
+      }
+
+      &:active {
+        background: @buttonActiveColor;
+      }
+
+      &.disabled {
+        &, &:link, &:visited, &:hover, &:active {
+          background: #e6e6e9;
+          color: #c0c0c0;
+          border: none;
+          box-shadow: 0 0 1px #b8bbbf;
+        }
+
+      }
+
+    }
+  }
+
+  .bottom {
+    margin: 0 22px;
+    ul li {
+      display: inline-block;
+      padding: 10px 8px;
+      text-align: center;
+
+      span {
+        height: 50px;
+        display: inline-block;
+      }
+      p {
+        font-size: 12px;
+        color: #999;
+        padding-top: 5px;
+      }
+    }
+
+    .webim-picture-icon, .webim-picture-icon:hover, .webim-phone-icon, .webim-phone-icon:hover {
+      width: 50px;
+      background-size: 50px 50px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+}
+
+.webim-send-wrapper .top .webim-auto-icon {
+  background-image: url(../../images/auto_default.png);
+}
+
+.webim-send-wrapper .top .webim-auto-icon:hover {
+  background-image: url(../../images/auto_active.png);
+}
+
+.webim-send-wrapper .top .webim-keybord-icon {
+  background-image: url(../../images/keybord_default.png);
+}
+
+.webim-send-wrapper .top .webim-keybord-icon:hover {
+  background-image: url(../../images/keybord_active.png);
+}
+
+.webim-send-wrapper .top .webim-add-icon {
+  background-image: url(../../images/add_default.png);
+}
+
+.webim-send-wrapper .top .webim-add-icon:hover {
+  background-image: url(../../images/add_active.png);
+}
+
+.webim-send-wrapper .bottom .webim-picture-icon {
+  background-image: url(../../images/picture_default.png);
+}
+
+.webim-send-wrapper .bottom .webim-picture-icon:hover {
+  background-image: url(../../images/picture_active.png);
+}
+
+.webim-send-wrapper .bottom .webim-phone-icon {
+  background-image: url(../../images/phone_default.png);
+}
+
+.webim-send-wrapper .bottom .webim-phone-icon:hover {
+  background-image: url(../../images/phone_active.png);
+}
+

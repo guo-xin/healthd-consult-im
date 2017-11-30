@@ -1,0 +1,54 @@
+/*
+ * notify
+ */
+.notify {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  word-wrap: break-word;
+  width: 100%;
+  font-size: 14px;
+  background: #ececec;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  line-height: 35px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 6px 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border: 0px none rgb(0, 0, 0);
+
+  .success {
+    background-color: rgb(174, 218, 62);
+  }
+
+  .error {
+    color: #999;
+    height: 35px;
+    .left {
+      padding: 0 14px;
+    }
+
+    .right {
+      padding-right: 20px;
+    }
+
+    button {
+      color: #30c2e5;
+      padding: 3px 12px;
+      border-radius: 4px;
+      background: transparent;
+      border: 1px #30c2e5 solid;
+      vertical-align: middle;
+    }
+    button:active{
+      background: #d8e6ea;
+    }
+  }
+
+  i {
+    position: absolute;
+    right: 10px;
+    top: 9px;
+  }
+}

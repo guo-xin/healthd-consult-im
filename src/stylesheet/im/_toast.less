@@ -1,0 +1,41 @@
+.toast {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 60%;
+    border-radius: 4px;
+    margin-top: -20%;
+  }
+
+  .icon{
+    text-align: center;
+    img{
+      max-height: 64px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .content{
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+  }
+
+  &.loading {
+    .icon img{
+      margin-bottom: 0;
+      max-height: 48px;
+      vertical-align: middle;
+    }
+  }
+}
